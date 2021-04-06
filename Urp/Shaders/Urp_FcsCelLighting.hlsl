@@ -25,11 +25,11 @@ void FcsCelLighting_float(
 	half3 lightDirection;
 	half shadowAtten;
 
-#if SHADERGRAPH_PREVIEW
+#ifdef SHADERGRAPH_PREVIEW
 	lightDirection = half3(0.5, 0.5, 0);
 	shadowAtten = 1;
 #else
-#if SHADOWS_SCREEN
+#ifdef SHADOWS_SCREEN
 	half4 clipPos = TransformWorldToHClip(WorldPosition);
 	half4 shadowCoord = ComputeScreenPos(clipPos);
 #else

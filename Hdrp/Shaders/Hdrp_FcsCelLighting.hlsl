@@ -25,7 +25,7 @@ void FcsCelLighting_float(
 	half3 lightDirection;
 	half shadowAtten;
 	
-#if SHADERGRAPH_PREVIEW
+#ifdef SHADERGRAPH_PREVIEW
 	lightDirection = half3(0.5, 0.5, 0);
 	shadowAtten = 1;
 #else
